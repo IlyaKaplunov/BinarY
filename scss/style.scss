@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+@import "_nullstyle";
+@import "_variables";
+
+
+// Blocks
+@import "_btn";
+@import "_intro";
+@import "_header-block";
+@import "_menu";
+@import "_about";
+@import "_portfolio";
+@import "_partners";
+@import "_contact";
+@import "_footer";
+
+
+
+body {
+    font-family: $fontfamily;
+    overflow-x: hidden;
+}
+
+// Ibg 
+
+.ibg{
+    position: relative;
+    
+
+    img{
+        width: 0;
+        height: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+/* Wrapper */
+
+.wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Container */
+
+.container {
+    max-width: 1101px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Intro */
+
+.intro {
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+    min-height: 100vh;
+    
+    &__content {
+        flex: 1 1 auto;
+        position: relative;
+        z-index: 1;
+
+        .container {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+
+    &__logo {
+        margin-top: 164px;
+    }
+
+    &__text {
+        color: $white;
+        position: relative;
+        padding-bottom: 45px;
+        margin: 30px 0;
+         
+        &:after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            width: 105px;
+            height: 2px;
+            background-color: $white;
+            transform: translateX(-50%);
+        }
+    }
+
+    &__title {
+        color: #fff;
+        font-size: 34px;
+        text-transform: uppercase;
+        font-weight: 700;
+        letter-spacing: 3px;
+
+        @media (max-width: 414px) {
+            font-size: 28px;
+            line-height: 40px;
+        }
+    }
+
+    &__subtitle {
+        color: $white;
+        font-size: 26px;
+        letter-spacing: 4px;
+        margin-top: 20px;
+
+        @media (max-width: 414px) {
+            font-size: 23px;
+        }
+    }
+
+    &__footer {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 153px;
+    }
+
+
+    &__arrow {
+        animation: arrow 2s infinite ease;
+        position: relative;
+    }
+
+    &__bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+}
+
+@keyframes arrow {
+    0% {
+        top: 0;
+    }
+    50% {
+        top: 20px;
+    }
+    100% {
+        top: 0;
+    }
+}
+
+

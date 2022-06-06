@@ -1,0 +1,113 @@
+.about {
+    &__row {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__column {
+        flex: 0 1 33.33333%;
+        padding: 0 15px;
+        margin: 68px 0 96px;
+
+        @media (max-width: 768px) {
+            flex: 0 1 100%;
+        }
+    }
+
+    &__item {
+        text-align: center;
+    }
+
+    &__icon {
+        margin-bottom: 38px;
+        border: 1px solid #f2f2f2;
+        width: 92px;
+        height: 92px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        transform: scale(0);
+        transition: all 0.5s ease 1s;
+        
+        &_l {
+            img {
+                position: relative;
+                left: 5px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            width: 202px;
+            border-width: 10px;
+            height: 202px;
+        }
+
+        img {
+            @media (max-width: 768px) {
+                width: 92px;
+                height: 92px;
+            }
+        }
+
+        @media (max-width: 424px) {
+            width: 172px;
+            height: 172px;
+        }
+
+        img {
+            @media (max-width: 424px) {
+                width: 67px;
+                height: 52px;
+            }
+        }
+
+        &._active {
+            transform: scale(1);
+        }
+    }
+    
+
+    &__title {
+        font-size: 22px;
+        letter-spacing: 3px;
+        margin-bottom: 28px;
+        transform: scale(0);
+        transition: all 0.5s ease 1.2s;
+
+        @media (max-width: 768px) {
+            font-size: 35px;
+        }
+
+        @media (max-width: 414px) {
+            font-size: 28px;
+        }
+
+        &._active {
+            transform: scale(1);
+        }
+    }
+    
+
+    &__info {
+        color: #868585;
+        font-size: 14px;
+        line-height: 26px;
+        transform: scale(0);
+        transition: all 0.5s ease 1.4s;
+
+        @media (max-width: 768px) {
+            font-size: 23px;
+            line-height: 45px;
+        }
+
+        @media (max-width: 414px) {
+            font-size: 18px;
+            line-height: 35px;
+        }
+
+        &._active {
+            transform: scale(1);
+        }
+    }
+}
